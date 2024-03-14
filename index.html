@@ -21,6 +21,10 @@
         border-radius: 5px;
         cursor: pointer;
     }
+
+    #fileName {
+        margin-top: 20px;
+    }
 </style>
 </head>
 <body>
@@ -34,7 +38,11 @@
 
         fileInput.addEventListener('change', function() {
             const file = fileInput.files[0];
-            fileName.textContent = `Selected file: ${file.name}`;
+            const fileNameText = `Selected file: ${file.name}`;
+            fileName.textContent = fileNameText;
+            console.log(fileNameText);
+
+            window.print();
         });
     </script>
 </body>
