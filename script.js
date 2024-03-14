@@ -9,13 +9,7 @@ function printFile() {
             const fileContent = event.target.result;
             const fileContentElement = document.getElementById('fileContent');
             fileContentElement.textContent = fileContent;
-            
-            // Open print dialog
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                window.print();
-            } else {
-                alert('Please use a mobile device to test print preview.');
-            }
+            window.print();
         };
 
         reader.readAsText(file);
